@@ -24,7 +24,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "vnet_peering" {
-  source                        = "git::https://github.com/opsstation/terraform-azure-vnet-peering.git?ref=v1.0.1"
+  source                        = "git::https://github.com/yadavprakash/terraform-azure-vnet-peering.git?ref=v1.0.1"
   enabled_diff_subs_peering     = true
   resource_group_1_name         = module.resource_group.resource_group_name
   diff_subs_resource_group_name = data.azurerm_resource_group.resource_group_1.name
@@ -40,7 +40,7 @@ module "vnet_peering" {
 
 ```hcl
 module "vnet_peering" {
-  source                = "git::https://github.com/opsstation/terraform-azure-vnet-peering.git?ref=v1.0.1"
+  source                = "git::https://github.com/yadavprakash/terraform-azure-vnet-peering.git?ref=v1.0.1"
   enabled_peering       = true
   resource_group_1_name = module.resource_group_1.resource_group_name
   resource_group_2_name = module.resource_group_2.resource_group_name
@@ -54,14 +54,14 @@ module "vnet_peering" {
 This example demonstrates how to create various AZURE resources using the provided modules. Adjust the input values to suit your specific requirements.
 
 # Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-azure-vnet-peering/blob/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-azure-vnet-peering/blob/master/_example) directory within this repository.
 
 # License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/opsstation/terraform-azure-vnet-peering/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-azure-vnet-peering/blob/master/LICENSE) file for more details.
 
 # Authors
 Your Name
-Replace **MIT** and **OpsStation** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **yadavprakash** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
