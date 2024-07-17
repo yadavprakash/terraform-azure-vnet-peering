@@ -4,7 +4,7 @@ provider "azurerm" {
 }
 
 module "resource_group" {
-  source      = "git::https://github.com/opsstation/terraform-azure-resource-group.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-azure-resource-group.git?ref=v1.0.0"
   name        = "app"
   environment = "test"
   location    = "North Europe"
@@ -13,7 +13,7 @@ module "resource_group" {
 
 #Vnet
 module "vnet" {
-  source              = "git::https://github.com/opsstation/terraform-azure-vnet.git?ref=v1.0.0"
+  source              = "git::https://github.com/yadavprakash/terraform-azure-vnet.git?ref=v1.0.0"
   name                = "app"
   environment         = "test"
   resource_group_name = module.resource_group.resource_group_name
@@ -50,5 +50,7 @@ module "vnet_peering" {
   vnet_diff_subs_name           = data.azurerm_virtual_network.mgmt-staging-vnet.name
   vnet_diff_subs_id             = data.azurerm_virtual_network.mgmt-staging-vnet.id
 }
+
+
 
 
