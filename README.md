@@ -24,7 +24,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "vnet_peering" {
-  source                        = "git::https://github.com/yadavprakash/terraform-azure-vnet-peering.git?ref=v1.0.1"
+  source                        = "git::https://github.com/yadavprakash/terraform-azure-vnet-peering.git"
   enabled_diff_subs_peering     = true
   resource_group_1_name         = module.resource_group.resource_group_name
   diff_subs_resource_group_name = data.azurerm_resource_group.resource_group_1.name
@@ -40,7 +40,7 @@ module "vnet_peering" {
 
 ```hcl
 module "vnet_peering" {
-  source                = "git::https://github.com/yadavprakash/terraform-azure-vnet-peering.git?ref=v1.0.1"
+  source                = "git::https://github.com/yadavprakash/terraform-azure-vnet-peering.git"
   enabled_peering       = true
   resource_group_1_name = module.resource_group_1.resource_group_name
   resource_group_2_name = module.resource_group_2.resource_group_name
